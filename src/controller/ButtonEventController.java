@@ -1,7 +1,7 @@
 package com.company.controller;
 
 import view.view.MainWindow;
-import view.view.consts.Color;
+import view.view.consts.EnumCol;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.MouseEvent;
 import org.eclipse.swt.events.MouseListener;
@@ -26,8 +26,8 @@ public class ButtonEventController {
                 int a = window.getFunctionStep().getSelection();
                 int top = -bottom;
                 com.company.model.functions.BFunction second = new com.company.model.functions.BFunction(bottom,top, a);
-                window.chartField.addChart("Second", second.getXes(), second.getYes());
-                window.chartField.setColor("Second", Color.GREEN);
+                window.chartField.addChart("B", second.getXes(), second.getYes());
+                window.chartField.setColor("B", EnumCol.GREEN);
                 window.chartField.redraw();
                 window.getTable().removeAll();
                 for (int loopIndex = 0; loopIndex < second.getXes().length; loopIndex++) {

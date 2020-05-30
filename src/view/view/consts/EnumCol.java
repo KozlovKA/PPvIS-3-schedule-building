@@ -1,6 +1,6 @@
 package view.view.consts;
 
-public enum Color {
+public enum EnumCol {
     BLACK,
     GREEN
 }

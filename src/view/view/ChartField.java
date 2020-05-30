@@ -5,6 +5,7 @@ import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swtchart.*;
+import view.view.consts.EnumCol;
 
 
 public class ChartField {
@@ -35,15 +36,14 @@ public class ChartField {
                 .createSeries(ISeries.SeriesType.LINE, seriesDescription);
         series.setYSeries(seriesY);
         series.setXSeries(seriesX);
+
     }
 
-    public void setColor(String seriesDescription, view.view.consts.Color color) {
+    public void setColor(String seriesDescription, EnumCol enumCol) {
         ILineSeries series = (ILineSeries) chart.getSeriesSet().getSeries(seriesDescription);
         Display display = this.chart.getDisplay();
-        if (color == view.view.consts.Color.BLACK)
-            series.setLineColor(new Color(display, 127, 255, 50));
-        else if (color == view.view.consts.Color.GREEN)
-            series.setLineColor(new Color(display, 127, 255, 50));
+            series.setSymbolColor(new Color(display, 255, 0, 0));
+            series.setLineColor(new Color(display,0,0,0));
     }
 
     public Chart getChart() {
@@ -54,10 +54,10 @@ public class ChartField {
         this.getChart().redraw();
     }
 
-    public void clear () {
+    public void clear() {
         ISeriesSet seriesSet = this.getChart().getSeriesSet();
         ISeries[] a = seriesSet.getSeries();
-        for (ISeries series: a){
+        for (ISeries series : a) {
             if (!series.getId().equals("x-3"))
                 this.getChart().getSeriesSet().deleteSeries(series.getId());
         }

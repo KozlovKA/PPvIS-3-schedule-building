@@ -5,16 +5,16 @@ import java.util.List;
 
 public abstract class Function {
     private final double step = 0.01;
-    protected int aParam;
+    protected int nParam;
     double[] Xes;
     double[] Yes;
     int topValue;
     int bottomValue;
 
-    public Function(int topValue, int bottomValue, int aParam) {
+    public Function(int topValue, int bottomValue, int nParam) {
         this.topValue = topValue;
-        this.bottomValue = 10;
-        this.aParam = aParam;
+        this.bottomValue = bottomValue;
+        this.nParam = nParam;
         List<Double> xes = new LinkedList<>();
         List<Double> yes = new LinkedList<>();
         for (double i = bottomValue; i < topValue; i += step) {
