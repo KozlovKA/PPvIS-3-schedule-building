@@ -1,1 +1,9 @@
-PPvIS-3-schedule-building
+# ЛАБОРАТОРНАЯ РАБОТА№ 3
+
+## ТЕМА: РАЗРАБОТКА СОБСТВЕННОГО КОМПОНЕНТА ДЛЯ ПОСТРОЕНИЯ ГРАФИКОВ
+
+### Вариант 12 
+
+#### Козлов К.А.-821701
+![Вариант 12-задание](https://sun9-67.userapi.com/X4C8k6uhSfGvjX9HGAQs0hk1iaL1OhgYlBl9fg/WRz-uZSdufg.jpg)
+
